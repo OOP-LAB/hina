@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.IOException;
 class Employee {
 int Empid;
 String Name;
@@ -28,12 +29,13 @@ System.out.println("Address: "+Address);
 System.out.println("Department: "+dept);
 System.out.println("Subject: "+subject);
 }
-public static void main(String[] args) {
+public static void main(String[] args)throws IOException
+{
 System.out.println("\nEnter the No. of Employee's");
-Scanner sc1 = new Scanner(System.in);
-int num = sc1.nextInt();
+Scanner sc1=new Scanner(System.in);
+int num=sc1.nextInt();
 Teacher arr[]=new Teacher[num];
-for(int i =0;i<num;i++)
+for(int i=0;i<num;i++)
 {
 Scanner sc =new Scanner(System.in);
 System.out.println("Enter Employee id: ");
@@ -57,7 +59,6 @@ int j=i+1;
 System.out.println("\n"+j+").");
 arr[i].display();
 }
-sc1.close();
 }
 }
 
